@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("finalbdaycard.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    position:relative;
+}
+button{
+    width:200px;
+    height:50px;
+    border:2px solid black;
+    border-radius: 50px;
+    background-color: rgb(250, 76, 76);
+    position:absolute;
+    top:100px;
+    right:100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+button:hover{
+    width:210px;
+    height:60px;
+    
+}

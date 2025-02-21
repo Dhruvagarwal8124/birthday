@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abbys birthday game!!</title>
+    <link rel="stylesheet" href="stylesgame.css">
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="puzzle-game-bright-casual-video-game-music-249202.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div id="coverScreenBody"></div>
+    <div id="heading">
+        <h1>ABBY'S BIRTHDAY!!!</h1>
+    </div>
+
+    <div id="riddle1">
+        <div id="coverScreen"></div>
+
+        <h1>Something that is always on me, <br>was once sprayed you too, <br>
+            marks the beginning of our love story,<br> you know what would be your number 2</h1>
+        <div id="riddleinput">
+            <input type="text" placeholder="Answer" id="riddleanswer" autocomplete="off"><br><br>
+            <button id="riddleSubmit">DONE</button> 
+        </div>
+        
+        
+        
+        <p id="nextClue">
+            CLUE 1 <br> "First date ka date important hain baby"
+        </p>
+    </div>
+
+    <div id="firstdate">
+        <div id="coverScreenDate"></div>
+        <div id="inputScreen">
+            
+        </div>
+        <div id="digits">
+            <div>
+                <button class="dateSelector" id="1">1</button>
+                <button class="dateSelector" id="2">2</button>
+                <button class="dateSelector" id="3">3</button>
+            </div>
+            <div>
+                <button class="dateSelector" id="4">4</button>
+                <button class="dateSelector" id="5">5</button>
+                <button class="dateSelector" id="6">6</button>
+            </div>
+            <div>
+                <button class="dateSelector" id="7">7</button>
+                <button class="dateSelector" id="8">8</button>
+                <button class="dateSelector" id="9">9</button>
+            </div>
+            <div>
+                <button class="dateSelector" id="0">0</button>
+                <button class="dateSelector" id="hyphen">-</button>
+                <button class="dateSelector" id="backspace">C</button>
+            </div>
+        </div>
+        <p id="nextClueDate">
+            CLUE 2 <br> "answer to the blank is the song i sang for you sabse pehle "
+        </p>
+    </div>
+
+    <!-- <div id="wordle">
+        <div id="wordleContainer">
+            
+        </div>
+    </div> -->
+
+    <!-- <div id="keyboard">
+        <div class="whitekeys" id="A">A</div>
+        <div class="blackkeys" id="A-sharp"></div>
+        <div class="whitekeys" id="B">B</div>
+        <div class="whitekeys" id="C">C</div>
+        <div class="blackkeys" id="C-sharp"></div>
+        <div class="whitekeys" id="D">D</div>
+        <div class="blackkeys" id="D-sharp"></div>
+        <div class="whitekeys" id="E">E</div>
+        <div class="whitekeys" id="F">F</div>
+        <div class="blackkeys" id="F-sharp"></div>
+        <div class="whitekeys" id="G">G</div>
+        <div class="blackkeys" id="G-sharp"></div>
+        <div class="whitekeys" id="A1">A</div>
+    </div> -->
+    <div id="blank">
+        <div id="coverScreenBlank"></div>
+        <h1><b>Music notes are the answer to everything.</b></h1>
+        <p>"I JUST <input type="text" id="blanktext" autocomplete="off"> WITH YOU!!"</p>
+        <button id="blanksubmit">I know this is it</button>
+        <h1 id="nextClueBlank">
+            CLUE 3 <br> "Its so fun to talk about movies we watch in a cryptic way"
+        </h1>
+    </div>
+
+    <div id="winebutton">
+        <button id="wine">
+            
+        </button>
+    </div>
+    <div id="anagram">
+        <h1>SOLVE THE ANAGRAM</h1>
+        <h2>G O T N T I N - L I H L</h2>
+        <input type="text" id="anagramtext" autocomplete="off"><br>
+        <button id="anagramsubmit">This is it</button>
+    </div>
+
+    <div id="board">
+        <div id="coverScreenPuzzle"></div>
+        <p id="nextCluePuzzle">
+            CLUE 3 <br> "Its so fun to talk about movies we watch in a cryptic way"
+        </p>
+    </div>
+    <script src="scriptgame.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.min.js"></script>
+
+</body>
+</html>

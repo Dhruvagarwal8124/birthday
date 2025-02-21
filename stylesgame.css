@@ -1,0 +1,517 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(bodybg.jpg!w700wp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    position:relative;  
+    overflow: hidden; 
+    height:100vh;
+    
+}
+/* .text{
+    height:200px;
+    margin:30px;
+    background-color: bisque;
+} */
+
+/* heading */
+#heading{
+    position:absolute;
+    top:20px;
+    left:50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    color:black;
+}
+/* slide puzzle game */
+#board{
+    background-color: aqua;
+    width:360px;
+    height:360px;
+    margin:0 auto;
+    border:10px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: repeat(3, 1fr); 
+    box-sizing: content-box;
+    position:absolute;
+    bottom:0px;
+    right:50px;
+    box-shadow: 3px 3px 6px 6px black;
+}
+#board img{
+    width:120px;
+    height:120px;
+    border:0.1px solid black;
+}
+#coverScreenPuzzle{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 360px;
+    height: 360px;
+    border: 3px solid silver;
+    border-radius: 10px;
+    background-image:url(abbypuzzle.jpg);
+    background-size: 360px 360px;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out, z-index 1s ease-in;
+    z-index: 1; /* Start hidden */
+}
+.revealPuzzleCover {
+    transform: scaleY(0) !important;
+    opacity: 0 !important;
+    z-index: -1 !important;
+} 
+#nextCluePuzzle{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    translate: -50%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, z-index 1s ease-in;
+    z-index: -1; /* Start hidden */
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+#riddle1{
+    width:400px;
+    height:300px;
+    background-image: url(riddlebackground.jpeg);
+    /* background-color: blue; */
+    background-size:400px 300px;
+    background-repeat: no-repeat;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;
+    position:absolute;
+    top:120px;
+    left:50%;
+    translate:-50%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px 6px black;
+    z-index: 0;
+}
+#riddle1 h1{
+    margin-top:80px;
+    font-size: 17px;
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* #riddleinput{
+    margin:10px;
+    position
+} */
+#riddle1 input{
+    position:relative;
+    margin:10px;
+    left:50%;
+    translate:-50%;
+    background-color:rgb(100, 73, 15);
+    border:1;
+    border-radius: 20px;
+    height:30px;
+    float:left;
+    width:150px;
+    color:white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#riddle1 button{
+    position:absolute;
+    left:50%;
+    translate:-50%;
+    width:45px;
+    height:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin-top:20px;
+    margin:10px;
+    border:1;
+    border-radius: 30px;
+    background-color: rgb(100, 73, 15);
+    
+}
+
+#coverScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 300px;
+    background: white;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out, z-index 1s ease-in;
+    z-index: -1;
+}
+
+/* Class to reveal it */
+ .revealRiddleCover {
+    transform: scaleY(1) !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+} 
+
+#nextClue {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, z-index 1s ease-in;
+    z-index: -1; /* Ensure it’s on top */
+    color:black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    
+}
+.showFirstClue {
+    opacity: 1 !important;
+    z-index: 2 !important;
+}
+
+
+
+#firstdate{
+    
+    background-color: black;
+    position:absolute;
+    top:58%;
+    left:90px;
+    width:180px;
+    height:230px;
+    border:3px solid silver;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 3px 3px 6px 6px black;
+}
+
+#inputScreen{
+    width:150px;
+    height:40px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 2px 2px grey;
+    color:black;
+    border:2;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display:flex;
+    align-items:center;
+    color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+#digits{
+    margin:10px;
+}
+.dateSelector{
+    width:30px;
+    height:30px;
+    margin:2px;
+    border:1;
+    border-radius:30px;
+    background-color: black;
+    color:white;    
+    box-shadow: 1px 1px 2px 2px grey;
+}
+#coverScreenDate{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width:180px;
+    height:230px;
+    border:3px solid silver;
+    border-radius: 50px;
+    background: white;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+#nextClueDate{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1; /* Ensure it’s on top */
+    color:black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+/* piano section */
+/* #keyboard{
+    width:210px;
+    height:100px;
+    display:flex;
+    background-color: white;
+    position:absolute;
+    bottom:10px;
+    right:50%;
+    translate:50%;
+    box-shadow:2px 2px 5px 5px black;
+}
+.whitekeys{
+    border:1px solid black;
+    width:30px;
+    height:100px;
+    background-color: white;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.blackkeys{
+    width: 15px;
+    height: 50px;
+    background: black; 
+    position: absolute; 
+    z-index: 1;
+    color:white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;}
+
+#A-sharp { left: 19px; }
+#C-sharp { left: 72px; }
+#D-sharp { left: 98px; }
+#F-sharp { left: 150px; }
+#G-sharp { left: 176px; } */
+
+/* fill in the blanks section */
+
+
+
+#blank{
+    width:300px;
+    height:200px;
+    background-image:url(blankbg.jpeg);
+    background-size:300px 200px;
+    background-repeat: no-repeat;
+    position:absolute;
+    top:120px;
+    left:40px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px 6px black;
+}
+#blank h1{
+    margin-top:55px;
+    font-size:18px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(0, 0, 0);
+}
+#blank p{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+#blank p input{
+    width:200px;
+    font-weight: bold;
+}
+#blanktext{
+    border:0;
+    background: none;
+    text-align: center;
+    outline: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+}
+#blanksubmit{
+    background-color: black;
+    color:white;
+    width:100px;
+    height:40px;
+    margin:5px;
+    align-items: center;
+    border:2;
+    border-radius:30px;
+}
+#coverScreenBlank {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 200px;
+    border: 3px solid silver;
+    border-radius: 10px;
+    background: white;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out, z-index 1s ease-in;
+    z-index: -1; /* Start hidden */
+}
+
+#nextClueBlank {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    translate: -50%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, z-index 1s ease-in;
+    z-index: -1; /* Start hidden */
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+/* When revealed */
+.revealBlankCover {
+    transform: scaleY(1) !important;
+    opacity: 1 !important;
+    z-index: 10 !important; /* Bring to front */
+}
+
+.showBlankClue {
+    opacity: 1 !important;
+    z-index: 11 !important; /* Bring to front */
+}
+
+/* Wordle section */
+/* #wordle{
+    width:200px;
+    height:400px;
+    background-color: black;
+    float:right;
+    margin:5px;;
+    outline:5px solid blue;
+}
+
+.inputLetter{
+    width:30px;
+    height:30px;
+    background-color: rgb(68, 67, 67);
+    box-shadow: 1px 1px 3px grey;
+    color:white;
+    margin:5px;
+    border:none;
+    outline:none;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    caret-color: transparent;
+    text-transform:uppercase;
+} */
+#winebutton {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 0s 1s;
+}
+
+#winebutton button {
+    background-image:url(wine.png);
+    background-size: 150px 150px;
+    background-repeat: no-repeat;
+    border: 5px solid black;
+    box-shadow: 2px 2px 3px 3px black;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+}
+
+#winebutton img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}    
+
+.revealWineButton {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+
+/* #winebutton {
+    
+    background:none;
+    font-size: 50px; 
+    text-align: center; 
+    line-height: 60px;
+    border: none;
+    cursor: pointer;
+}
+#winebutton img{
+    width:40px;
+    height:auto;
+} */
+
+#anagram{
+    background-image:url(anagrambg.jpeg);
+    background-size:300px 200px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    width:300px;
+    height:200px;
+    position:absolute;
+    top:10px;
+    right:50px;
+    box-shadow: 3px 3px 6px 6px black;
+}
+#anagram h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    margin-top:45px;
+}
+#anagram h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+    margin-top:5px;
+}
+#anagram input{
+    margin-left: 10px;
+    margin-top:2px;
+    caret-color: transparent;
+    background-color: black;
+    width:180px;
+    height:30px;
+    color:white;
+    border-radius: 10px;
+    border:2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+#anagram button{
+    background-color: black;
+    color:white;
+    width:70px;
+    height:30px;
+    border:0;
+    border-radius: 10px;
+    margin-top: 2px;
+}
