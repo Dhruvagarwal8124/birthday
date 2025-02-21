@@ -5,7 +5,6 @@ var blankTile;
 var rows = 3;
 var columns = 3;
 var imageOrder = ["1", "2", "3", "4", "0", "5", "6", "7", "8"];
-// var imageOrder = ["1","0","2", "3", "4","5", "6", "7", "8"];
 
 // window.onload = function() {
 //     let bodyCover = document.getElementById("coverScreenBody");
